@@ -579,7 +579,7 @@ export async function initProduksi() {
       const totalBahan = Number(produksi.qty_kirim || 0) * Number(produksi.hpp_bahan || 0);
 
       // TOTAL MODAL
-      const totalCost = totalBahan + Number(produksi.biaya_jasa || 0);
+      const totalCost = totalBahan + Number(produksi.biaya_produksi || 0);
 
       // ESTIMASI HASIL BATCH
       const estimasiHasil = Number(produksi.qty_kirim || 0) - (Number(produksi.qty_kirim || 0) * Number(produksi.estimasi_susut || 0)) / 100;
