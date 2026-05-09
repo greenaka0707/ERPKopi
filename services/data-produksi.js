@@ -71,23 +71,24 @@ async function loadHistoryProduksi() {
     .from("produksi")
     .select(
       `
-      id,
-      no_prd,
-      tanggal,
+  id,
+  no_prd,
+  tanggal,
 
-      qty_kirim,
-      qty_hasil,
-      target_hasil,
-      sisa,
+  qty_kirim,
+  qty_hasil,
+  target_hasil,
+  sisa,
 
-      biaya_jasa,
+  biaya_produksi,
+  biaya_jasa,
 
-      status,
+  status,
 
-      produk:produk_bahan_id (
-        nama_produk
-      )
-    `,
+  produk:produk_bahan_id (
+    nama_produk
+  )
+`,
     )
     .order("created_at", {
       ascending: false,
@@ -234,7 +235,7 @@ async function loadHistoryProduksi() {
               text-right
             "
           >
-            ${rupiah(item.biaya_jasa || 0)}
+            ${rupiah(item.biaya_produksi || item.biaya_jasa || 0)}
           </td>
 
           <!-- STATUS -->
