@@ -138,7 +138,9 @@ small {
   display: flex;
   flex-direction: column;
   background: #f8fafc;
-  margin-left: 0;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -616,7 +618,7 @@ textarea:focus {
 }
 
 .item-builder {
-  display: grid;
+  display: flex;
 
   grid-template-columns:
     minmax(0, 1fr)
@@ -955,21 +957,27 @@ table {
   position: fixed;
   inset: 0;
   z-index: 20000;
-  display: none;
+
+  display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 24px;
+
   background: rgba(15, 23, 42, 0.45);
   backdrop-filter: blur(4px);
+
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+
   transition: 0.15s ease;
 }
 
 .modal.show {
-  display: flex;
   opacity: 1;
-  pointer-events: all;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .modal-overlay {
@@ -1803,4 +1811,48 @@ body {
   textarea.input {
     min-height: 100px;
   }
+}
+
+button,
+.btn,
+input,
+select,
+textarea {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   MODAL FIX
+========================= */
+
+.modal {
+  z-index: 999999 !important;
+}
+
+.modal.show {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.modal-card {
+  position: relative;
+  z-index: 1000000 !important;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card,
+.table,
+.table-wrapper,
+.page,
+#app {
+  position: relative;
+  z-index: 1;
 }
