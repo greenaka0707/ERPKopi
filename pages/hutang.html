@@ -1,0 +1,108 @@
+<div class="page-header">
+  <div>
+    <h1>Hutang</h1>
+
+    <p>Monitoring seluruh hutang perusahaan</p>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="card mb-20">
+  <div class="form-grid">
+    <!-- SEARCH -->
+    <div class="form-group">
+      <label>Cari</label>
+
+      <input type="text" id="search" class="input" placeholder="Cari supplier / vendor..." />
+    </div>
+
+    <!-- JENIS -->
+    <div class="form-group">
+      <label>Jenis</label>
+
+      <select id="filterJenis" class="input">
+        <option value="">Semua</option>
+
+        <option value="PEMBELIAN">Pembelian</option>
+
+        <option value="PRODUKSI">Produksi</option>
+
+        <option value="REIMBURSEMENT">Reimbursement</option>
+      </select>
+    </div>
+
+    <!-- STATUS -->
+    <div class="form-group">
+      <label>Status</label>
+
+      <select id="filterStatus" class="input">
+        <option value="">Semua</option>
+
+        <option value="BELUM LUNAS">Belum Lunas</option>
+
+        <option value="CICIL">Cicil</option>
+
+        <option value="LUNAS">Lunas</option>
+
+        <option value="BELUM DIGANTI">Belum Diganti</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-grid">
+  <!-- TOTAL -->
+  <div class="card summary-card">
+    <small>Total Hutang</small>
+
+    <h2 id="totalHutang">Rp 0</h2>
+  </div>
+
+  <!-- BELUM LUNAS -->
+  <div class="card summary-card">
+    <small>Belum Lunas</small>
+
+    <h2 id="belumLunas">0</h2>
+  </div>
+
+  <!-- CICIL -->
+  <div class="card summary-card">
+    <small>Cicil</small>
+
+    <h2 id="cicil">0</h2>
+  </div>
+</div>
+
+<!-- TABLE -->
+<div class="card">
+  <div class="table-wrapper">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+
+          <th>Jenis</th>
+
+          <th>Nama</th>
+
+          <th>No Ref</th>
+
+          <th class="text-right">Total</th>
+
+          <th class="text-right">Bayar</th>
+
+          <th class="text-right">Sisa</th>
+
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody">
+        <tr>
+          <td colspan="8" class="text-center">Memuat data...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

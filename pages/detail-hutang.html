@@ -1,0 +1,113 @@
+<div class="page">
+  <!-- HEADER -->
+  <div class="page-header detail-header">
+    <div>
+      <h1>Detail Hutang</h1>
+
+      <p>Informasi detail hutang supplier</p>
+    </div>
+
+    <!-- ACTION -->
+    <div class="detail-action-group">
+      <!-- KEMBALI -->
+      <button class="btn btn-secondary" onclick="loadPage('hutang')">
+        <i data-lucide="arrow-left"></i>
+
+        Kembali
+      </button>
+
+      <!-- BAYAR -->
+      <button class="btn btn-success" onclick="bayarHutang()">
+        <i data-lucide="wallet"></i>
+
+        Bayar
+      </button>
+
+      <!-- PRINT -->
+      <button class="btn btn-info" onclick="printDetailHutang()">
+        <i data-lucide="printer"></i>
+
+        Print
+      </button>
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <div class="detail-grid">
+    <!-- NO REF -->
+    <div class="card detail-card">
+      <small>No Referensi</small>
+
+      <h3 id="detail-no-ref">-</h3>
+    </div>
+
+    <!-- NAMA -->
+    <div class="card detail-card">
+      <small>Supplier</small>
+
+      <h3 id="detail-nama">-</h3>
+    </div>
+
+    <!-- STATUS -->
+    <div class="card detail-card">
+      <small>Status</small>
+
+      <h3 id="detail-status">-</h3>
+    </div>
+
+    <!-- TOTAL -->
+    <div class="card detail-card">
+      <small>Total Hutang</small>
+
+      <h3 id="detail-total">Rp 0</h3>
+    </div>
+
+    <!-- DIBAYAR -->
+    <div class="card detail-card">
+      <small>Sudah Dibayar</small>
+
+      <h3 id="detail-bayar">Rp 0</h3>
+    </div>
+
+    <!-- SISA -->
+    <div class="card detail-card">
+      <small>Sisa Hutang</small>
+
+      <h3 id="detail-sisa">Rp 0</h3>
+    </div>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="card mt-20">
+    <div class="card-header">
+      <div>
+        <h3>History Pembayaran</h3>
+
+        <p>Riwayat pembayaran hutang</p>
+      </div>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+
+            <th>Metode</th>
+
+            <th>Keterangan</th>
+
+            <th class="text-right">Nominal</th>
+          </tr>
+        </thead>
+
+        <tbody id="detail-items">
+          <tr>
+            <td colspan="4" class="table-empty">Belum ada pembayaran</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

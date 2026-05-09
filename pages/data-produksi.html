@@ -1,0 +1,67 @@
+<div class="page">
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div>
+      <h1>Data Produksi</h1>
+
+      <p>Monitoring proses produksi roasting</p>
+    </div>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="card">
+    <!-- HEADER -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; gap: 20px; flex-wrap: wrap">
+      <div>
+        <h3>History Produksi</h3>
+
+        <small style="color: #94a3b8"> Monitoring batch roasting </small>
+      </div>
+
+      <button class="btn btn-secondary" id="btn-refresh-history">
+        <i data-lucide="refresh-cw"></i>
+
+        Refresh
+      </button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <!-- NO -->
+            <th style="width: 70px; text-align: center">No</th>
+
+            <!-- TANGGAL -->
+            <th style="min-width: 140px">Tanggal</th>
+
+            <!-- BAHAN -->
+            <th style="min-width: 260px">Bahan</th>
+
+            <!-- QTY KIRIM -->
+            <th style="min-width: 120px; text-align: right">Qty Kirim</th>
+
+            <!-- QTY HASIL -->
+            <th style="min-width: 120px; text-align: right">Qty Hasil</th>
+
+            <!-- SISA -->
+            <th style="min-width: 100px; text-align: right">Sisa</th>
+
+            <!-- BIAYA -->
+            <th style="min-width: 160px; text-align: right">Biaya</th>
+
+            <!-- STATUS -->
+            <th style="width: 140px; text-align: center">Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="history-body">
+          <tr>
+            <td colspan="9" style="text-align: center; padding: 40px; color: #94a3b8">Memuat data produksi...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

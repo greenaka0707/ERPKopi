@@ -1,0 +1,73 @@
+<div class="page">
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div>
+      <h1>Stok</h1>
+
+      <p>Monitoring stok realtime</p>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="card">
+    <div class="filter-grid">
+      <!-- SEARCH -->
+      <input type="text" class="input" id="search-stok" placeholder="Cari produk..." />
+
+      <!-- FILTER -->
+      <select class="input" id="filter-stok">
+        <option value="">Semua Stok</option>
+
+        <option value="aman">Aman</option>
+
+        <option value="menipis">Menipis</option>
+
+        <option value="habis">Habis</option>
+      </select>
+
+      <!-- REFRESH -->
+      <button class="btn btn-primary" id="btn-refresh">Refresh</button>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="card">
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <!-- NO -->
+            <th style="width: 70px; text-align: center">No</th>
+
+            <!-- KODE -->
+            <th style="min-width: 120px">Kode</th>
+
+            <!-- PRODUK -->
+            <th style="min-width: 260px">Produk</th>
+
+            <!-- STOK -->
+            <th style="width: 120px; text-align: center">Stok</th>
+
+            <!-- HPP -->
+            <th style="min-width: 150px; text-align: right">HPP Avg</th>
+
+            <!-- NILAI -->
+            <th style="min-width: 170px; text-align: right">Nilai Stok</th>
+
+            <!-- STATUS -->
+            <th style="width: 130px; text-align: center">Status</th>
+
+            <!-- AKSI -->
+            <th style="width: 120px; text-align: center">Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody id="stok-body">
+          <tr>
+            <td colspan="8" style="text-align: center; padding: 40px; color: #94a3b8">Belum ada data stok</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+<div class="page">
+  <!-- HEADER -->
+  <div class="page-header">
+    <div>
+      <h1>Dashboard</h1>
+
+      <p>Monitoring operasional ERP Kopi</p>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="dashboard-grid">
+    <!-- TOTAL KAS -->
+    <div class="card dashboard-card dashboard-click" onclick="loadPage('kas')">
+      <div class="dashboard-card-top">
+        <div>
+          <small>Total Kas</small>
+
+          <h2 id="total-kas">Rp 0</h2>
+        </div>
+
+        <div class="dashboard-icon blue">
+          <i data-lucide="wallet"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIUTANG -->
+    <div class="card dashboard-card dashboard-click" onclick="loadPage('piutang')">
+      <div class="dashboard-card-top">
+        <div>
+          <small>Piutang</small>
+
+          <h2 id="total-piutang">Rp 0</h2>
+        </div>
+
+        <div class="dashboard-icon green">
+          <i data-lucide="hand-coins"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- HUTANG -->
+    <div class="card dashboard-card dashboard-click" onclick="loadPage('hutang')">
+      <div class="dashboard-card-top">
+        <div>
+          <small>Hutang</small>
+
+          <h2 id="total-hutang">Rp 0</h2>
+        </div>
+
+        <div class="dashboard-icon red">
+          <i data-lucide="badge-dollar-sign"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUKSI -->
+    <div class="card dashboard-card dashboard-click" onclick="loadPage('data-produksi')">
+      <div class="dashboard-card-top">
+        <div>
+          <small>Produksi Aktif</small>
+
+          <h2 id="total-produksi">0</h2>
+        </div>
+
+        <div class="dashboard-icon orange">
+          <i data-lucide="factory"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- OMSET -->
+    <div class="card dashboard-card dashboard-click" onclick="loadPage('data-penjualan')">
+      <div class="dashboard-card-top">
+        <div>
+          <small>Omset</small>
+
+          <h2 id="dashboard-omset">Rp 0</h2>
+        </div>
+
+        <div class="dashboard-icon purple">
+          <i data-lucide="shopping-cart"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOTAL NOTA -->
+    <div class="card dashboard-card dashboard-click" onclick="loadPage('data-penjualan')">
+      <div class="dashboard-card-top">
+        <div>
+          <small>Total Nota</small>
+
+          <h2 id="dashboard-nota">0</h2>
+        </div>
+
+        <div class="dashboard-icon cyan">
+          <i data-lucide="receipt-text"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- QTY TERJUAL -->
+    <div class="card dashboard-card dashboard-click" onclick="loadPage('stok')">
+      <div class="dashboard-card-top">
+        <div>
+          <small>Qty Terjual</small>
+
+          <h2 id="dashboard-qty">0</h2>
+        </div>
+
+        <div class="dashboard-icon yellow">
+          <i data-lucide="package"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- KAS MASUK -->
+    <div class="card dashboard-card dashboard-click" onclick="loadPage('kas')">
+      <div class="dashboard-card-top">
+        <div>
+          <small>Kas Masuk</small>
+
+          <h2 id="dashboard-kas-masuk">Rp 0</h2>
+        </div>
+
+        <div class="dashboard-icon green">
+          <i data-lucide="arrow-down-circle"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- KAS KELUAR -->
+    <div class="card dashboard-card dashboard-click" onclick="loadPage('kas')">
+      <div class="dashboard-card-top">
+        <div>
+          <small>Kas Keluar</small>
+
+          <h2 id="dashboard-kas-keluar">Rp 0</h2>
+        </div>
+
+        <div class="dashboard-icon red">
+          <i data-lucide="arrow-up-circle"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

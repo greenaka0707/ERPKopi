@@ -1,0 +1,123 @@
+<div class="page-header">
+  <div>
+    <h1>Pembelian</h1>
+
+    <p>Input transaksi pembelian</p>
+  </div>
+</div>
+
+<!-- FORM GRID -->
+<div class="form-grid">
+  <!-- FORM -->
+  <div class="card">
+    <div class="form-group">
+      <label>Tanggal</label>
+
+      <input type="date" class="input" id="tanggal" />
+    </div>
+
+    <div class="form-group">
+      <label>Supplier</label>
+
+      <select class="input" id="supplier">
+        <option value="">Pilih Supplier</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Pembayaran</label>
+
+      <select class="input" id="pembayaran">
+        <option value="Cash">Cash</option>
+
+        <option value="Tempo">Tempo</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Rekening</label>
+
+      <select class="input" id="rekening">
+        <option value="">Pilih Rekening</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Catatan</label>
+
+      <textarea class="input" id="catatan" rows="5" placeholder="Catatan pembelian..."></textarea>
+    </div>
+  </div>
+
+  <!-- ITEM -->
+  <div class="card">
+    <!-- ITEM BUILDER -->
+    <div class="item-builder">
+      <select class="input" id="produk-item">
+        <option value="">Pilih Produk</option>
+      </select>
+
+      <input type="number" class="input" id="qty-item" placeholder="Qty" />
+
+      <input type="number" class="input" id="harga-item" placeholder="Harga" />
+
+      <button class="btn btn-primary" id="btn-add-item">+</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Produk</th>
+
+            <th>Qty</th>
+
+            <th>Harga</th>
+
+            <th>Subtotal</th>
+
+            <th>Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody id="item-body">
+          <tr>
+            <td colspan="5" style="text-align: center; padding: 40px; color: #94a3b8">Belum ada item pembelian</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="transaction-footer" style="margin-top: 24px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap">
+      <!-- SUMMARY -->
+      <div class="transaction-summary">
+        <div class="summary-item">
+          <small>Total Pembelian</small>
+
+          <h2 id="grand-total">Rp 0</h2>
+        </div>
+
+        <div class="summary-item">
+          <small>Dibayar</small>
+
+          <input type="number" class="input" id="dibayar" value="0" />
+        </div>
+
+        <div class="summary-item">
+          <small>Sisa Hutang</small>
+
+          <h3 id="sisa-hutang">Rp 0</h3>
+        </div>
+      </div>
+
+      <!-- ACTION -->
+      <div style="display: flex; gap: 10px; align-items: center">
+        <button class="btn btn-secondary" id="btn-reset-pembelian">Reset</button>
+
+        <button class="btn btn-primary" id="btn-simpan-pembelian">Simpan Pembelian</button>
+      </div>
+    </div>
+  </div>
+</div>

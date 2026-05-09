@@ -1,0 +1,113 @@
+<div class="page">
+  <!-- HEADER -->
+  <div class="page-header detail-header">
+    <div>
+      <h1>Detail Penjualan</h1>
+
+      <p>Informasi transaksi penjualan</p>
+    </div>
+
+    <!-- ACTION -->
+    <div class="detail-action-group">
+      <!-- KEMBALI -->
+      <button class="btn btn-secondary" onclick="loadPage('data-penjualan')">
+        <i data-lucide="arrow-left"></i>
+
+        Kembali
+      </button>
+
+      <!-- INVOICE -->
+      <button class="btn btn-info" onclick="lihatInvoicePenjualan()">
+        <i data-lucide="receipt-text"></i>
+
+        Invoice
+      </button>
+
+      <!-- PEMBAYARAN -->
+      <button class="btn btn-success" onclick="lihatPembayaranPenjualan()">
+        <i data-lucide="wallet"></i>
+
+        Pembayaran
+      </button>
+
+      <!-- EDIT -->
+      <button class="btn btn-warning" onclick="editPenjualan()">
+        <i data-lucide="pencil"></i>
+
+        Edit
+      </button>
+
+      <!-- HAPUS -->
+      <button class="btn btn-danger" onclick="hapusPenjualan()">
+        <i data-lucide="trash-2"></i>
+
+        Hapus
+      </button>
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <div class="detail-grid">
+    <!-- NO REF -->
+    <div class="card detail-card">
+      <small>No Invoice</small>
+
+      <h3 id="detail-no-ref">-</h3>
+    </div>
+
+    <!-- CUSTOMER -->
+    <div class="card detail-card">
+      <small>Customer</small>
+
+      <h3 id="detail-customer">-</h3>
+    </div>
+
+    <!-- STATUS -->
+    <div class="card detail-card">
+      <small>Status</small>
+
+      <h3 id="detail-status">-</h3>
+    </div>
+
+    <!-- TOTAL -->
+    <div class="card detail-card">
+      <small>Total</small>
+
+      <h3 id="detail-total">Rp 0</h3>
+    </div>
+  </div>
+
+  <!-- ITEM -->
+  <div class="card mt-20">
+    <div class="card-header">
+      <div>
+        <h3>Item Penjualan</h3>
+
+        <p>Daftar produk transaksi</p>
+      </div>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Produk</th>
+
+            <th class="text-center">Qty</th>
+
+            <th class="text-right">Harga</th>
+
+            <th class="text-right">Subtotal</th>
+          </tr>
+        </thead>
+
+        <tbody id="detail-items">
+          <tr>
+            <td colspan="4" class="table-empty">Memuat data...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

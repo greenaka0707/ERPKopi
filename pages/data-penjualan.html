@@ -1,0 +1,57 @@
+<div class="page">
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div>
+      <h1>Penjualan</h1>
+
+      <p>Monitoring transaksi penjualan</p>
+    </div>
+  </div>
+
+  <!-- CARD -->
+  <div class="card">
+    <!-- HEADER -->
+    <div class="card-header">
+      <div>
+        <h3>History Penjualan</h3>
+
+        <p>Data transaksi penjualan customer</p>
+      </div>
+
+      <button class="btn btn-secondary" id="btn-refresh-history">
+        <i data-lucide="refresh-cw"></i>
+
+        Refresh
+      </button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="col-invoice">Invoice</th>
+
+            <th class="col-date">Tanggal</th>
+
+            <th class="col-customer">Customer</th>
+
+            <th class="col-money text-right">Total</th>
+
+            <th class="col-money text-right">Dibayar</th>
+
+            <th class="col-money text-right">Sisa</th>
+
+            <th class="col-status text-center">Status</th>
+          </tr>
+        </thead>
+
+        <tbody id="history-body">
+          <tr>
+            <td colspan="8" class="table-empty">Belum ada data penjualan</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

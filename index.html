@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ERP Kopi</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/app.css" />
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- LUCIDE -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <div id="app-layout">
+      <!-- SIDEBAR -->
+      <aside id="sidebar"></aside>
+
+      <!-- MOBILE OVERLAY -->
+      <div id="sidebar-overlay"></div>
+
+      <!-- MAIN -->
+      <main id="main-content">
+        <!-- NAVBAR -->
+        <header id="navbar"></header>
+
+        <!-- APP -->
+        <section id="app"></section>
+      </main>
+    </div>
+
+    <!-- APP -->
+    <script type="module" src="./app.js"></script>
+
+    <!-- GLOBAL LOADER -->
+    <div id="page-loader">
+      <div class="loader-spinner"></div>
+    </div>
+  </body>
+</html>

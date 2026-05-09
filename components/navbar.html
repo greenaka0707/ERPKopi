@@ -1,0 +1,41 @@
+<div class="navbar-wrapper">
+  <!-- LEFT -->
+  <div class="navbar-left">
+    <!-- MOBILE MENU -->
+    <button id="btn-mobile-sidebar" class="mobile-menu-btn" type="button">
+      <i data-lucide="menu"></i>
+    </button>
+
+    <!-- MENU -->
+    <div class="navbar-menu">
+      <button class="nav-btn" data-page="penjualan" onclick="loadPage('penjualan')">Jual</button>
+
+      <button class="nav-btn" data-page="pembelian" onclick="loadPage('pembelian')">Beli</button>
+
+      <button class="nav-btn" data-page="produksi" onclick="loadPage('produksi')">Produksi</button>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="navbar-right">
+    <!-- USER -->
+    <div class="navbar-user">
+      <!-- AVATAR -->
+      <div class="navbar-avatar" id="navbar-avatar">A</div>
+
+      <!-- INFO -->
+      <div class="navbar-user-info">
+        <strong id="navbar-user-name"> Admin </strong>
+
+        <small id="navbar-user-role"> ERP Operator </small>
+      </div>
+    </div>
+
+    <!-- LOGOUT -->
+    <button class="btn btn-danger btn-sm" onclick="logout()">
+      <i data-lucide="log-out"></i>
+
+      Logout
+    </button>
+  </div>
+</div>

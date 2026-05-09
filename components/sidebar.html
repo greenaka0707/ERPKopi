@@ -1,0 +1,84 @@
+<div class="sidebar-wrapper">
+  <!-- HEADER -->
+  <div class="sidebar-header">
+    <div class="sidebar-brand">
+      <!-- BRAND -->
+      <div class="sidebar-logo">
+        <h2>Greenaka</h2>
+      </div>
+
+      <!-- TOGGLE -->
+      <button id="btn-sidebar-toggle" class="sidebar-toggle" type="button" aria-label="Toggle Sidebar">
+        <i data-lucide="panel-left-close"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <nav class="sidebar-menu">
+    <!-- DASHBOARD -->
+    <button type="button" data-page="dashboard" onclick="loadPage('dashboard')">
+      <i data-lucide="layout-dashboard"></i>
+
+      <span>Dashboard</span>
+    </button>
+
+    <!-- DATA -->
+    <div class="sidebar-group">
+      <small class="sidebar-title"> DATA </small>
+
+      <button type="button" data-page="data-pembelian" onclick="loadPage('data-pembelian')">
+        <i data-lucide="shopping-cart"></i>
+
+        <span>Pembelian</span>
+      </button>
+
+      <button type="button" data-page="data-penjualan" onclick="loadPage('data-penjualan')">
+        <i data-lucide="receipt-text"></i>
+
+        <span>Penjualan</span>
+      </button>
+
+      <button type="button" data-page="data-produksi" onclick="loadPage('data-produksi')">
+        <i data-lucide="factory"></i>
+
+        <span>Produksi</span>
+      </button>
+
+      <button type="button" data-page="stok" onclick="loadPage('stok')">
+        <i data-lucide="boxes"></i>
+
+        <span>Stok</span>
+      </button>
+
+      <button type="button" data-page="data-pembayaran" onclick="loadPage('data-pembayaran')">
+        <i data-lucide="wallet"></i>
+
+        <span>Pembayaran</span>
+      </button>
+    </div>
+
+    <!-- KEUANGAN -->
+    <div class="sidebar-group">
+      <small class="sidebar-title"> KEUANGAN </small>
+
+      <button type="button" data-page="hutang" onclick="loadPage('hutang')">
+        <i data-lucide="badge-dollar-sign"></i>
+
+        <span>Hutang</span>
+      </button>
+
+      <button type="button" data-page="piutang" onclick="loadPage('piutang')">
+        <i data-lucide="hand-coins"></i>
+
+        <span>Piutang</span>
+      </button>
+
+      <button type="button" data-page="kas" onclick="loadPage('kas')">
+        <i data-lucide="landmark"></i>
+
+        <span>Kas</span>
+      </button>
+    </div>
+  </nav>
+</div>

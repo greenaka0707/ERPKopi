@@ -1,0 +1,126 @@
+<div class="page-header">
+  <div>
+    <h1>Arus Pembayaran</h1>
+    <p>Seluruh arus uang masuk dan keluar perusahaan</p>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="card mb-20">
+  <div class="form-grid">
+    <!-- TANGGAL AWAL -->
+    <div class="form-group">
+      <label>Tanggal Awal</label>
+
+      <input type="date" id="tglAwal" class="input" />
+    </div>
+
+    <!-- TANGGAL AKHIR -->
+    <div class="form-group">
+      <label>Tanggal Akhir</label>
+
+      <input type="date" id="tglAkhir" class="input" />
+    </div>
+
+    <!-- JENIS -->
+    <div class="form-group">
+      <label>Jenis</label>
+
+      <select id="filterJenis" class="input">
+        <option value="">Semua</option>
+
+        <option value="PENJUALAN">Penjualan</option>
+
+        <option value="PEMBELIAN">Pembelian</option>
+
+        <option value="PRODUKSI">Produksi</option>
+
+        <option value="REIMBURSEMENT">Reimbursement</option>
+      </select>
+    </div>
+
+    <!-- ARAH -->
+    <div class="form-group">
+      <label>Arah</label>
+
+      <select id="filterArah" class="input">
+        <option value="">Semua</option>
+
+        <option value="MASUK">Masuk</option>
+
+        <option value="KELUAR">Keluar</option>
+      </select>
+    </div>
+
+    <!-- METODE -->
+    <div class="form-group">
+      <label>Metode</label>
+
+      <select id="filterMetode" class="input">
+        <option value="">Semua</option>
+
+        <option value="CASH">Cash</option>
+
+        <option value="TRANSFER">Transfer</option>
+
+        <option value="QRIS">QRIS</option>
+      </select>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="form-group">
+      <label>Cari</label>
+
+      <input type="text" id="search" class="input" placeholder="Cari keterangan..." />
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-grid">
+  <!-- MASUK -->
+  <div class="card summary-card">
+    <small>Total Masuk</small>
+
+    <h2 id="totalMasuk">Rp 0</h2>
+  </div>
+
+  <!-- KELUAR -->
+  <div class="card summary-card">
+    <small>Total Keluar</small>
+
+    <h2 id="totalKeluar">Rp 0</h2>
+  </div>
+
+  <!-- SALDO -->
+  <div class="card summary-card">
+    <small>Saldo</small>
+
+    <h2 id="saldo">Rp 0</h2>
+  </div>
+</div>
+
+<!-- TABLE -->
+<div class="card">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+          <th>Jenis</th>
+          <th>Arah</th>
+          <th>Nominal</th>
+          <th>Metode</th>
+          <th>Kategori</th>
+          <th>Keterangan</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody">
+        <tr>
+          <td colspan="7" class="text-center">Memuat data...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

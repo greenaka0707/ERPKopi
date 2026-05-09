@@ -1,0 +1,177 @@
+<div class="page">
+  <!-- HEADER -->
+  <div class="page-header detail-header">
+    <div>
+      <h1>Detail Produksi</h1>
+
+      <p>Monitoring detail proses produksi</p>
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap">
+      <button class="btn btn-secondary" onclick="loadPage('data-produksi')">
+        <i data-lucide="arrow-left"></i>
+
+        Kembali
+      </button>
+
+      <button class="btn btn-primary" onclick="openModalHasil()">
+        <i data-lucide="package-plus"></i>
+
+        Input Hasil
+      </button>
+
+      <button class="btn btn-warning" onclick="editProduksi()">
+        <i data-lucide="pencil"></i>
+
+        Edit
+      </button>
+
+      <button class="btn btn-danger" onclick="hapusProduksi()">
+        <i data-lucide="trash"></i>
+
+        Hapus
+      </button>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="detail-grid">
+    <div class="card">
+      <small>No Produksi</small>
+
+      <h3 id="detail-no-produksi">-</h3>
+    </div>
+
+    <div class="card">
+      <small>Bahan</small>
+
+      <h3 id="detail-bahan">-</h3>
+    </div>
+
+    <div class="card">
+      <small>Qty Kirim</small>
+
+      <h3 id="detail-kirim">0</h3>
+    </div>
+    <div class="card">
+      <small>Target Hasil</small>
+
+      <h3 id="detail-target">0</h3>
+    </div>
+
+    <div class="card">
+      <small>Qty Hasil</small>
+
+      <h3 id="detail-hasil">0</h3>
+    </div>
+
+    <div class="card">
+      <small>Sisa Produksi</small>
+
+      <h3 id="detail-sisa">0</h3>
+    </div>
+
+    <div class="card">
+      <small>Status</small>
+
+      <div id="detail-status">-</div>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="card mt-20">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 12px">
+      <strong>Progress Produksi</strong>
+
+      <strong id="progress-percent"> 0% </strong>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <small id="progress-text" style="color: #94a3b8; margin-top: 10px; display: block"> 0 / 0 </small>
+  </div>
+
+  <!-- HISTORY HASIL -->
+  <div class="card mt-20">
+    <div class="card-header">
+      <h3>History Hasil Produksi</h3>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+
+            <th>Produk</th>
+
+            <th class="text-right">Qty</th>
+
+            <th>Catatan</th>
+          </tr>
+        </thead>
+
+        <tbody id="hasil-body">
+          <tr>
+            <td colspan="4" class="text-center">Belum ada hasil produksi</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL HASIL -->
+<div class="modal" id="modal-hasil-produksi" style="display: none">
+  <!-- OVERLAY -->
+  <div class="modal-overlay" onclick="closeModalHasil()"></div>
+
+  <!-- CARD -->
+  <div class="modal-card">
+    <!-- HEADER -->
+    <div class="modal-header">
+      <div>
+        <h3>Input Hasil Produksi</h3>
+
+        <small style="color: #94a3b8"> Barang jadi hasil roasting </small>
+      </div>
+
+      <button class="modal-close" onclick="closeModalHasil()">×</button>
+    </div>
+
+    <!-- BODY -->
+    <div class="modal-body">
+      <!-- PRODUK -->
+      <div class="form-group">
+        <label> Produk Hasil </label>
+
+        <select class="input" id="produk-hasil">
+          <option value="">Pilih Produk</option>
+        </select>
+      </div>
+
+      <!-- QTY -->
+      <div class="form-group">
+        <label> Qty Hasil </label>
+
+        <input type="number" class="input" id="qty-hasil" placeholder="Qty hasil produksi" />
+      </div>
+
+      <!-- CATATAN -->
+      <div class="form-group">
+        <label> Catatan Hasil </label>
+
+        <textarea class="input" id="catatan-hasil" rows="4" placeholder="Catatan hasil roasting..."></textarea>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModalHasil()">Batal</button>
+
+      <button class="btn btn-primary" id="btn-simpan-hasil">Simpan Hasil</button>
+    </div>
+  </div>
+</div>

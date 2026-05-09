@@ -1,0 +1,97 @@
+<div class="page-header">
+  <div>
+    <h1>Kas</h1>
+
+    <p>Monitoring arus kas perusahaan</p>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="card mb-20">
+  <div class="form-grid">
+    <!-- SEARCH -->
+    <div class="form-group">
+      <label>Cari</label>
+
+      <input type="text" id="search" class="input" placeholder="Cari keterangan..." />
+    </div>
+
+    <!-- ARAH -->
+    <div class="form-group">
+      <label>Arah</label>
+
+      <select id="filterArah" class="input">
+        <option value="">Semua</option>
+
+        <option value="MASUK">Masuk</option>
+
+        <option value="KELUAR">Keluar</option>
+      </select>
+    </div>
+
+    <!-- METODE -->
+    <div class="form-group">
+      <label>Metode</label>
+
+      <select id="filterMetode" class="input">
+        <option value="">Semua</option>
+
+        <option value="CASH">Cash</option>
+
+        <option value="TRANSFER">Transfer</option>
+
+        <option value="QRIS">QRIS</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-grid">
+  <div class="card summary-card">
+    <small>Saldo Kas</small>
+
+    <h2 id="saldoKas">Rp 0</h2>
+  </div>
+
+  <div class="card summary-card">
+    <small>Total Masuk</small>
+
+    <h2 id="totalMasuk">Rp 0</h2>
+  </div>
+
+  <div class="card summary-card">
+    <small>Total Keluar</small>
+
+    <h2 id="totalKeluar">Rp 0</h2>
+  </div>
+</div>
+
+<!-- TABLE -->
+<div class="card">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+
+          <th>Jenis</th>
+
+          <th>Arah</th>
+
+          <th>Nominal</th>
+
+          <th>Metode</th>
+
+          <th>Keterangan</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody">
+        <tr>
+          <td colspan="6" class="text-center">Memuat data...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

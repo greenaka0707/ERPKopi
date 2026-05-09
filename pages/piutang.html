@@ -1,0 +1,275 @@
+<div class="page-header">
+  <div>
+    <h1>Piutang</h1>
+
+    <p>Monitoring seluruh piutang customer</p>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="card mb-20">
+  <div class="form-grid">
+    <!-- SEARCH -->
+    <div class="form-group">
+      <label>Cari</label>
+
+      <input type="text" id="search" class="input" placeholder="Cari customer..." />
+    </div>
+
+    <!-- STATUS -->
+    <div class="form-group">
+      <label>Status</label>
+
+      <select id="filterStatus" class="input">
+        <option value="">Semua</option>
+
+        <option value="BELUM LUNAS">Belum Lunas</option>
+
+        <option value="CICIL">Cicil</option>
+
+        <option value="LUNAS">Lunas</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-grid">
+  <!-- TOTAL -->
+  <div class="card summary-card">
+    <small>Total Piutang</small>
+
+    <h2 id="totalPiutang">Rp 0</h2>
+  </div>
+
+  <!-- BELUM LUNAS -->
+  <div class="card summary-card">
+    <small>Belum Lunas</small>
+
+    <h2 id="belumLunas">0</h2>
+  </div>
+
+  <!-- CICIL -->
+  <div class="card summary-card">
+    <small>Cicil</small>
+
+    <h2 id="cicil">0</h2>
+  </div>
+
+  <!-- LUNAS -->
+  <div class="card summary-card">
+    <small>Lunas</small>
+
+    <h2 id="lunas">0</h2>
+  </div>
+</div>
+
+<!-- TABLE -->
+<div class="card">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+
+          <th>Customer</th>
+
+          <th>No Ref</th>
+
+          <th class="text-right">Total</th>
+
+          <th class="text-right">Bayar</th>
+
+          <th class="text-right">Sisa</th>
+
+          <th>Status</th>
+
+          <th class="text-center">Aksi</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody">
+        <tr>
+          <td colspan="8" class="text-center">Memuat data...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- =========================
+     MODAL DETAIL PIUTANG
+========================= -->
+<div class="modal" id="modalDetailPiutang">
+  <div class="modal-content modal-lg">
+    <!-- HEADER -->
+    <div class="modal-header">
+      <div>
+        <h3>Detail Piutang</h3>
+
+        <small id="detailNoRef"> - </small>
+      </div>
+
+      <button class="modal-close" onclick="closeDetailPiutang()">✕</button>
+    </div>
+
+    <!-- BODY -->
+    <div class="modal-body">
+      <!-- SUMMARY -->
+      <div class="summary-grid mb-20">
+        <div class="card summary-card">
+          <small>Total Invoice</small>
+
+          <h3 id="detailTotal">Rp 0</h3>
+        </div>
+
+        <div class="card summary-card">
+          <small>Sudah Dibayar</small>
+
+          <h3 id="detailBayar">Rp 0</h3>
+        </div>
+
+        <div class="card summary-card">
+          <small>Sisa Piutang</small>
+
+          <h3 id="detailSisa">Rp 0</h3>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="form-grid mb-20">
+        <div class="form-group">
+          <label>Customer</label>
+
+          <input type="text" id="detailCustomer" class="input" readonly />
+        </div>
+
+        <div class="form-group">
+          <label>Status</label>
+
+          <input type="text" id="detailStatus" class="input" readonly />
+        </div>
+      </div>
+
+      <!-- HISTORI -->
+      <div class="card">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Tanggal</th>
+
+                <th>Metode</th>
+
+                <th>Keterangan</th>
+
+                <th class="text-right">Nominal</th>
+              </tr>
+            </thead>
+
+            <tbody id="tbodyHistoriPiutang">
+              <tr>
+                <td colspan="4" class="text-center">Belum ada pembayaran</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeDetailPiutang()">Tutup</button>
+
+      <button class="btn btn-primary" id="btnBayarPiutang">Bayar Piutang</button>
+    </div>
+  </div>
+</div>
+
+<!-- =========================
+     MODAL PEMBAYARAN
+========================= -->
+<div class="modal" id="modalPembayaran">
+  <div class="modal-content modal-md">
+    <!-- HEADER -->
+    <div class="modal-header">
+      <h3>Terima Pembayaran</h3>
+
+      <button class="modal-close" onclick="closeModalPembayaran()">✕</button>
+    </div>
+
+    <!-- BODY -->
+    <div class="modal-body">
+      <div class="form-grid">
+        <!-- CUSTOMER -->
+        <div class="form-group">
+          <label>Customer</label>
+
+          <input type="text" id="modalCustomer" class="input" readonly />
+        </div>
+
+        <!-- NO REF -->
+        <div class="form-group">
+          <label>No Ref</label>
+
+          <input type="text" id="modalRef" class="input" readonly />
+        </div>
+
+        <!-- TOTAL -->
+        <div class="form-group">
+          <label>Total Invoice</label>
+
+          <input type="text" id="modalTotal" class="input" readonly />
+        </div>
+
+        <!-- SISA -->
+        <div class="form-group">
+          <label>Sisa Piutang</label>
+
+          <input type="text" id="modalSisa" class="input" readonly />
+        </div>
+
+        <!-- NOMINAL -->
+        <div class="form-group">
+          <label>Nominal Bayar</label>
+
+          <input type="number" id="modalNominal" class="input" placeholder="0" />
+        </div>
+
+        <!-- REKENING -->
+        <div class="form-group">
+          <label>Rekening</label>
+
+          <select id="modalRekening" class="input"></select>
+        </div>
+
+        <!-- METODE -->
+        <div class="form-group">
+          <label>Metode</label>
+
+          <select id="modalMetode" class="input">
+            <option value="CASH">Cash</option>
+
+            <option value="TRANSFER">Transfer</option>
+
+            <option value="QRIS">QRIS</option>
+          </select>
+        </div>
+
+        <!-- KETERANGAN -->
+        <div class="form-group">
+          <label>Keterangan</label>
+
+          <input type="text" id="modalKeterangan" class="input" placeholder="Pembayaran customer" />
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModalPembayaran()">Batal</button>
+
+      <button class="btn btn-primary" onclick="submitPembayaranPiutang()">Simpan Pembayaran</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,122 @@
+<div class="page-header">
+  <div>
+    <h1>Produksi</h1>
+
+    <p>Input transaksi produksi</p>
+  </div>
+</div>
+
+<!-- FORM GRID -->
+<div class="form-grid">
+  <!-- FORM -->
+  <div class="card">
+    <div class="form-group">
+      <label>Tanggal</label>
+
+      <input type="date" class="input" id="tanggal" />
+    </div>
+
+    <div class="form-group">
+      <label>Jasa Produksi</label>
+
+      <select class="input" id="jasa">
+        <option value="">Pilih Jasa</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Status Pembayaran</label>
+
+      <select class="input" id="status-pembayaran">
+        <option value="Belum Bayar">Belum Bayar</option>
+
+        <option value="Lunas">Lunas</option>
+
+        <option value="Termin">Termin</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Produk Bahan</label>
+
+      <div class="search-select" id="produk-search-wrapper">
+        <input type="text" class="input" id="produk-search" placeholder="Cari produk..." autocomplete="off" />
+
+        <input type="hidden" id="produk-bahan" />
+
+        <div class="search-dropdown" id="produk-dropdown"></div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Qty Kirim</label>
+
+      <input type="number" class="input" id="qty-kirim" placeholder="Qty bahan" />
+    </div>
+
+    <div class="form-group">
+      <label>Estimasi Susut (%)</label>
+
+      <input type="number" class="input" id="estimasi-susut" value="20" />
+    </div>
+
+    <div class="form-group">
+      <label>Biaya Jasa</label>
+
+      <input type="number" class="input" id="biaya-jasa" value="0" />
+    </div>
+
+    <div class="form-group">
+      <label>Status</label>
+
+      <select class="input" id="status">
+        <option value="Pending">Pending</option>
+
+        <option value="Parsial">Parsial</option>
+
+        <option value="Selesai">Selesai</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Catatan</label>
+
+      <textarea class="input" id="catatan" rows="4" placeholder="Catatan produksi..."></textarea>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="card">
+    <div class="transaction-summary">
+      <div class="summary-item">
+        <small>HPP Bahan</small>
+
+        <h3 id="hpp-bahan">Rp 0</h3>
+      </div>
+
+      <div class="summary-item">
+        <small>Total Nilai Bahan</small>
+
+        <h3 id="nilai-bahan">Rp 0</h3>
+      </div>
+
+      <div class="summary-item">
+        <small>Estimasi Hasil</small>
+
+        <h3 id="estimasi-hasil">0 Kg</h3>
+      </div>
+
+      <div class="summary-item">
+        <small>Estimasi HPP Hasil</small>
+
+        <h2 id="hpp-hasil">Rp 0</h2>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; display: flex; justify-content: flex-end; gap: 10px">
+      <button class="btn btn-secondary" id="btn-reset-produksi">Reset</button>
+
+      <button class="btn btn-primary" id="btn-simpan-produksi">Kirim Produksi</button>
+    </div>
+  </div>
+</div>

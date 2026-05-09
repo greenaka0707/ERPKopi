@@ -1,0 +1,161 @@
+<div class="page-header">
+  <div>
+    <h1>Penjualan</h1>
+    <p>Input transaksi penjualan</p>
+  </div>
+</div>
+
+<div class="form-grid">
+  <!-- LEFT -->
+  <div class="card">
+    <div class="form-group">
+      <label>Tanggal</label>
+
+      <input type="date" class="input" id="tanggal" />
+    </div>
+
+    <!-- CUSTOMER -->
+    <div class="form-group">
+      <label>Customer</label>
+
+      <div class="search-select" id="customer-select">
+        <input type="text" class="input search-input" id="customer-search" placeholder="Cari customer..." autocomplete="off" />
+
+        <div class="search-dropdown" id="customer-dropdown"></div>
+      </div>
+    </div>
+
+    <!-- SALES -->
+    <div class="form-group">
+      <label>Sales</label>
+
+      <select class="input" id="sales">
+        <option value="">Pilih Sales</option>
+      </select>
+    </div>
+
+    <!-- PEMBAYARAN -->
+    <div class="form-group">
+      <label>Pembayaran</label>
+
+      <select class="input" id="pembayaran">
+        <option value="Cash">Cash</option>
+        <option value="Tempo">Tempo</option>
+      </select>
+    </div>
+
+    <!-- REKENING -->
+    <div class="form-group">
+      <label>Rekening</label>
+
+      <select class="input" id="rekening">
+        <option value="">Pilih Rekening</option>
+      </select>
+    </div>
+
+    <!-- CATATAN -->
+    <div class="form-group">
+      <label>Catatan</label>
+
+      <textarea class="input" id="catatan" rows="4" placeholder="Catatan penjualan..."></textarea>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="card">
+    <!-- ITEM BUILDER -->
+    <div class="item-builder">
+      <!-- PRODUK -->
+      <div class="search-select" id="produk-select">
+        <input type="text" class="input search-input" id="produk-search" placeholder="Cari produk..." autocomplete="off" />
+
+        <div class="search-dropdown" id="produk-dropdown"></div>
+      </div>
+
+      <!-- QTY -->
+      <input type="number" class="input" id="qty-item" placeholder="Qty" />
+
+      <!-- HARGA -->
+      <input type="number" class="input" id="harga-item" placeholder="Harga" />
+
+      <!-- BUTTON -->
+      <button class="btn btn-primary" id="btn-add-item">+</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Produk</th>
+            <th>Qty</th>
+            <th>Harga</th>
+            <th>Subtotal</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody id="item-body">
+          <tr>
+            <td colspan="5" class="table-empty">Belum ada item penjualan</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="transaction-summary" style="margin-top: 20px">
+      <div class="summary-item">
+        <small>Total Item</small>
+        <h3 id="total-item">0</h3>
+      </div>
+
+      <div class="summary-item">
+        <small>Total Qty</small>
+        <h3 id="total-qty">0</h3>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="transaction-footer">
+      <div class="transaction-summary">
+        <div class="summary-item">
+          <small>Subtotal</small>
+          <h3 id="subtotal">Rp 0</h3>
+        </div>
+
+        <div class="summary-item">
+          <small>Diskon</small>
+          <input type="number" class="input" id="diskon" value="0" />
+        </div>
+
+        <div class="summary-item">
+          <small>Ongkir</small>
+          <input type="number" class="input" id="ongkir" value="0" />
+        </div>
+
+        <div class="summary-item">
+          <small>Grand Total</small>
+          <h2 id="grand-total">Rp 0</h2>
+        </div>
+
+        <div class="summary-item">
+          <small>Dibayar</small>
+          <input type="number" class="input" id="dibayar" value="0" />
+        </div>
+
+        <div class="summary-item">
+          <small>Sisa Piutang</small>
+          <h3 id="sisa-piutang">Rp 0</h3>
+        </div>
+      </div>
+
+      <!-- ACTION -->
+      <div style="display: flex; gap: 10px; align-items: center">
+        <button class="btn btn-secondary" id="btn-reset-penjualan">Reset</button>
+
+        <button class="btn btn-primary" id="btn-simpan-penjualan">Simpan Penjualan</button>
+      </div>
+    </div>
+  </div>
+</div>
