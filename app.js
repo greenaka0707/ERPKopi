@@ -199,7 +199,17 @@ window.loadPage = async function (page) {
       case "data-produksi":
         await initDataProduksi();
         break;
+      case "detail-penjualan":
+        await initDetailPenjualan();
+        break;
 
+      case "detail-produksi":
+        await initDetailProduksi();
+        break;
+
+      case "detail-hutang":
+        await initDetailHutang();
+        break;
       case "hutang":
         await initHutang();
         break;
